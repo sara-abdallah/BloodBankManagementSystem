@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE3759DA-5B2E-4C4D-AF7E-5603355A1BBD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BloodBankManagementSystem</RootNamespace>
+    <AssemblyName>BloodBankManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\donorBll.cs" />
+    <Compile Include="BLL\loginBll.cs" />
+    <Compile Include="BLL\stockBll.cs" />
+    <Compile Include="BLL\userBll.cs" />
+    <Compile Include="BloodBankManagementSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BloodBankManagementSystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\donorDal.cs" />
+    <Compile Include="DAL\loginDal.cs" />
+    <Compile Include="DAL\stockDal.cs" />
+    <Compile Include="DAL\userDal.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\add_donor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\add_donor.Designer.cs">
+      <DependentUpon>add_donor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\add_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\add_user.Designer.cs">
+      <DependentUpon>add_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\delete_donor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\delete_donor.Designer.cs">
+      <DependentUpon>delete_donor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\delete_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\delete_user.Designer.cs">
+      <DependentUpon>delete_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\donor_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\donor_data.Designer.cs">
+      <DependentUpon>donor_data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Stock.Designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\users_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\users_data.Designer.cs">
+      <DependentUpon>users_data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\user_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\user_home.Designer.cs">
+      <DependentUpon>user_home.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\add_donor.resx">
+      <DependentUpon>add_donor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\add_user.resx">
+      <DependentUpon>add_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\delete_donor.resx">
+      <DependentUpon>delete_donor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\delete_user.resx">
+      <DependentUpon>delete_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\donor_data.resx">
+      <DependentUpon>donor_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\users_data.resx">
+      <DependentUpon>users_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\user_home.resx">
+      <DependentUpon>user_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BloodBankManagementSystemDataSet.xsc">
+      <DependentUpon>BloodBankManagementSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BloodBankManagementSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BloodBankManagementSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BloodBankManagementSystemDataSet.xss">
+      <DependentUpon>BloodBankManagementSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\back.jpeg" />
+    <Content Include="Resources\delete donor.png" />
+    <Content Include="Resources\Donor.png" />
+    <Content Include="Resources\exit.png" />
+    <Content Include="Resources\image.jpg" />
+    <Content Include="Resources\imageedit_3_8879485870.png" />
+    <Content Include="Resources\login.png" />
+    <Content Include="Resources\Logout icon.png" />
+    <Content Include="Resources\R.jpg" />
+    <Content Include="Resources\refresh.png" />
+    <Content Include="Resources\save.png" />
+    <Content Include="Resources\search user.png" />
+    <None Include="Resources\search user1.png" />
+    <Content Include="Resources\stock.png" />
+    <Content Include="Resources\Update details.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
